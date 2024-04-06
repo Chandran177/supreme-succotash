@@ -1,0 +1,152 @@
+.sec2{
+    text-align: center;
+    padding:25px;
+}
+.sec2>h1{
+    font-size:3rem;
+    padding: 20px 0 10px 0;
+}
+.asideinsec2{
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    padding: 25px 4%;
+    justify-content:center;
+}
+.asideinsec2>.card{
+    width: 33%;
+    height: 420px;
+    padding: 10px;
+    position: relative;
+}
+
+.card>img{
+    width: 100%;
+    height: 100%;
+    object-fit:cover;
+    box-shadow: 0 2px 25px rgba(4, 4, 66, .4);
+    filter: brightness(70%);
+  
+}
+.card div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width:calc(100% - 20px);
+    height:calc(100% - 20px);
+    position:absolute;
+    top:10px;
+   
+}
+
+.card div p{
+    font-weight: bold;
+    font-size: 18px;
+    color: white;
+    opacity: 0;
+    transition:all 0.5s 0.5s;
+}
+.card div:hover{
+    background-image: linear-gradient(to left, rgba(226, 20, 20, 0.7) ,rgba(4, 4, 66, 0.7));
+}
+.card div:hover>p{
+    opacity: 1;
+}
+.card div>img{
+    position: absolute;
+    width:40%;
+    top:43%;
+    filter: drop-shadow(0 0 10px );
+    transition: all 1s ;
+}
+.card div>.inner2{
+    width:60%;
+}
+.card div>.inner6{
+    width: 30%;
+}
+.card div:hover>img{
+    top:25%;
+    rotate:y 360deg;
+}
+
+
+.sec2 button{
+   background-color: transparent;
+   border:2px solid ;
+}
+
+
+
+.asideinsec2 .card{
+
+    transform:scale(0.7) ;
+    opacity: 0;
+    animation: show linear forwards ;
+    animation-timeline: view();
+    animation-range:entry;
+}
+
+@keyframes  show {
+    
+    to{
+        transform:scale(1) ;
+        opacity: 1;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media only screen and (max-width:1150px){
+
+    .asideinsec2  .card{
+        height:340px;
+    }
+}
+@media only screen and (max-width:850px){
+
+    .asideinsec2  .card{
+        width: 45%;
+    }
+    .sec2>h1{
+        font-size:2rem;
+    }
+}
+@media only screen and (max-width:620px){
+
+    .asideinsec2  .card{
+        width: 80%;
+        height:300px;
+    }
+    /* .sec2>h1{
+        font-size:1rem;
+    } */
+}
+@media only screen and (max-width:430px){
+
+    .sec2 button{
+        padding: 10px 12px;
+     }
+}
+@media only screen and (max-width:375px){
+    
+    .asideinsec2  .card{
+        width: 100%;
+    }
+    .sec2>h1{
+        font-size:1.5rem;
+    }
+}

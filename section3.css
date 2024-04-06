@@ -1,0 +1,246 @@
+.sec3{
+    text-align: center;
+    padding: 2rem 0;
+}
+.sec3>h1{
+    font-size: 2.5rem;
+    padding: 1rem;
+}
+.sec3>.sec3list{
+    font-size: 1rem;
+    padding: 1rem;
+    padding-bottom: 0;
+    width:90%;
+    margin: auto;
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    margin-bottom: 20px;
+    overflow-x: scroll;
+}
+.sec3>div>label{
+    font-size: 1.2rem;
+    padding: 10px;
+    margin: 10px 5px;
+    display: inline-block;
+    border-radius: 5px ;
+    transition: all 0.3s linear ;
+}
+.sec3>button{
+    background-color: transparent;
+    border-color: black;
+}
+.sec3aside1{
+    display: none;
+    width: 100%;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    padding:1%;
+    text-align: left;
+    position: relative;
+}
+.sec3aside1>div{
+    width: 30%;
+    margin: 15px 0;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2) ;
+    transition: all 0.6s 0.3s;
+    background-color: white;
+    position: relative;
+    overflow: hidden;
+}
+.sec3aside1 div div:nth-child(2),.sec3aside1 .back div{
+    padding: 25px;
+    background-color: white;
+}
+
+.sec3aside1>div img{
+    width: 100%;
+}
+
+.sec3aside1>div div b,.sec3aside1 .back div b{
+    color: red;
+}
+.sec3aside1>div div h1,.sec3aside1 .back div h1{
+    padding: 10px 0;
+    font-size: 1.5rem;
+}
+.sec3aside1>div div p, .sec3aside1 .back div p{
+    font-size: 1.1rem;
+    line-height: 28px;
+}
+.version{
+    padding: 20px 30px;
+    position: absolute;
+    top:0;
+    left:-100%;
+    color: white;
+    background-color:rgba(36, 36, 36,0.8);
+    -webkit-backdrop-filter: blur(8px);
+    backdrop-filter: blur(8px);
+    height: 100%;
+    width:100%;
+    /* transition: all 0.5s 0.3s linear; */
+}
+
+.version{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap:15px;
+}
+.version h1,.version p{
+    /* display: inline-block; */
+    white-space: nowrap;
+    overflow: hidden;
+    width: 0;
+}
+.sec3aside1>div:hover .version{
+    top:0;
+    left:0%; 
+    color: yellowgreen;
+}
+.sec3aside1>div:hover .version h1{
+    animation: type 1s steps(8) 0.5s forwards , border 1s 0.5s;
+}
+hr{
+    width: 100%;
+}
+
+@keyframes border {
+    5%,99% {border:transparent;}
+    0%,4%,98% {border-right:2px solid white;}
+    100% {border:none}
+}
+@keyframes type {
+    from{
+        width: 0;
+    }
+    to{
+        width:59%;
+    }
+}
+.sec3aside1>div:hover .version p:nth-child(2),.sec3aside1>div:hover .version p:nth-child(7){
+    animation: type1 1s steps(10) 2s forwards, border1 1s 2s ;
+}
+@keyframes border1 {
+    5%,99% {border:transparent;}
+    0%,4%,98% {border-right:2px solid white;}
+    100% {border:none}
+}
+@keyframes type1 {
+    from{
+        width: 0;      
+    }
+    to{
+        width:33%;
+    }
+}
+.sec3aside1>div:hover .version p:nth-child(3),.sec3aside1>div:hover .version p:nth-child(8){
+    animation: type2 .5s steps(8) 3.5s forwards, border2 .5s 3.5s ;
+}
+@keyframes border2 {
+    5%,99% {border:transparent;}
+    0%,4%,98% {border-right:2px solid white;}
+    100% {border:none}
+}
+@keyframes type2 {
+    from{
+        width: 0;      
+    }
+    to{
+        width:16%;
+    }
+}
+.sec3aside1>div:hover .version p:nth-child(4),.sec3aside1>div:hover .version p:nth-child(9){
+    animation: type3 1s steps(10) 4.5s forwards, border3 1s 4.5s ;
+}
+@keyframes border3 {
+    5%,99% {border:transparent;}
+    0%,4%,98% {border-right:2px solid white;}
+    100% {border:none}
+}
+@keyframes type3 {
+    from{
+        width: 0;      
+    }
+    to{
+        width:28%;
+    }
+}
+
+#bf:checked~.sec3list label[for=bf], #fifa:checked~.sec3list label[for=fifa],#EA_News:checked~.sec3list label[for=EA_News],#apex:checked~.sec3list label[for=apex],#nfl:checked~.sec3list label[for=nfl],#star:checked~.sec3list label[for=star],#sims:checked~.sec3list label[for=sims],#f1:checked~.sec3list label[for=f1]{
+    color:white;
+    background-color: red;
+    box-shadow: 5px 5px 10px -5px rgba(0, 0, 0,0.3) inset,-5px -5px 10px -5px rgba(0, 0, 0,0.3) inset, 5px 5px 10px  rgba(240, 46, 46, 0.8) ;
+    
+}
+#bf:checked~.hiding .battlefield, #fifa:checked~.hiding .fifa,#EA_News:checked~.hiding .EA_News,#apex:checked~.hiding .apex ,#nfl:checked~.hiding .nfl ,#star:checked~.hiding .star ,#sims:checked~.hiding .sims ,#f1:checked~.hiding .f1{
+    display: flex;
+}
+
+.hiding .sec3aside1>div:hover{
+    transform: translatey(-15px);
+    box-shadow:0px 40px 38px rgba(0, 0, 0, 0.4),0px 20px 12px  rgba(0, 0, 0, 0.2);
+}
+
+input[name="swap"]{
+    display: none;
+}
+.sec3list div{
+    width: 3px;
+    height: 25px;
+    background-color:grey;
+}
+.sec3list div p{
+    opacity: 0;
+}
+
+
+
+.sec3 .sec3aside1 div{
+    opacity: 0.4;
+    animation: showimg linear forwards ;
+    animation-timeline: view();
+    animation-range:entry -150px;
+}
+
+@keyframes  showimg {
+    
+    to{
+        opacity: 1;
+    }
+}
+/* box-shadow: 0 50px 70px 1px, 2px 0px 30px 0px, -2px 0px 30px 0px; */
+
+@media only screen and (max-width:1250px){
+
+    .sec3>.sec3list{
+        justify-content: flex-start;
+        box-shadow: 0 5px 5px -7px rgba(0, 0, 0,0.4), 0 -5px 5px -7px rgba(0, 0, 0,0.4),  -30px 0 50px -30px  rgba(0, 0, 0,0.2)inset,  30px 0 50px -30px  rgba(0, 0, 0,0.2)inset;
+        /* border-radius: 10px; */
+        padding-top: 0;
+    }
+  
+}
+
+@media only screen and (max-width:800px){
+
+    .sec3aside1>div,.sec3aside1 .flip {
+        width: 45%;
+    }
+}
+@media only screen and (max-width:600px){
+    .sec3aside1>div, .sec3aside1 .flip{
+        width: 100%;
+    }
+    .sec3aside1{
+        padding: 7%;
+    }
+    .sec3>h1{
+        font-size: 2rem;
+    }
+    .sec3>.sec3list label{
+        font-size: 1rem; 
+    }
+}

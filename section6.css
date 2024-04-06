@@ -1,0 +1,201 @@
+.sec6{
+    height: fit-content;
+    position: relative;
+}
+.sec6aside1{
+    min-height:400px;
+    display: grid;
+    align-content: center;
+    justify-content: center;
+    text-align: center;
+    background-color:rgb(223, 66, 66);
+    color: white;
+}
+.sec6aside1 h1{
+    font-size: 2.5rem;
+    padding: 1.5rem;
+    background-image: url(./section6/battlefield-battlefield2042.gif);
+    background-size:cover;
+    background-clip: text;
+    color: transparent;
+}
+sup{
+    font-size: 10px;
+}
+/* .sec6aside1 label{
+    width: fit-content;
+    padding: 10px;
+    background-color: red;
+    margin: 0 8px;
+}
+.sec6aside1 label:hover{
+    transform: scale(1.2);
+    background-color: black;
+} */
+.sec6aside1 button{
+    background: transparent;
+    border-color: rgba(255, 255, 255,0.5);
+    color: rgba(255, 255, 255,0.5);
+}
+.sec6aside1 button:hover{
+    transition: transform 0.3s;
+    transform: translatey(-5px) scale(1.1);
+    background: cadetblue;
+    border-color: transparent;
+    box-shadow: 0 6px 3px -3px black;
+}
+/* ----------------section6 aside2 css------------------ */
+
+.sec6aside2{
+    display: flex;
+    /* height: 500px; */
+    padding: 50px 0;
+    position: absolute;
+    top:0px;
+    z-index: -1;
+    color: white;
+    background-image: linear-gradient(-50deg, rgba(9,207,204,1) 6%, rgba(0,0,0,1) 6%, rgba(0,0,0,1) 25%,rgba(55,55,55,1) 20%, rgba(55,55,55,1) 100%);
+}
+.sec6aside2>div{
+    width:50%;
+}
+.sec6aside2 div:nth-child(1){
+    padding: 0 10px 0 100px;
+}
+.sec6aside2 div:nth-child(2){
+    padding: 0 100px 0 10px;
+}
+.sec6aside2>div h1{
+    font-size: 2rem;
+    padding-bottom: 1.5rem;
+}
+input[type=text]{
+    width: 100%;
+    padding: 15px;
+    margin-bottom: 20px;
+    background-color:transparent;
+    border: 1px solid white;
+    color: white;
+    border-radius: 3px;
+}
+input[type=date]{
+    width: 48%;
+    margin-right: 3%;
+    padding: 15px;
+    vertical-align: top;
+    margin-bottom: 20px;
+    background-color: transparent;
+    border: 1px solid white;
+    color: white;
+    border-radius: 3px;
+}
+.lang{
+    width: 48%;
+    border: 1px solid;
+    padding:5px 20px;
+    display: inline-block;
+    border-radius: 3px;
+}
+.lang p{
+    padding: 1px 5px;
+    font-size: 13px;
+}
+.lang select{
+    width: 100%;
+    border:none;
+    outline: none;
+    background-color: transparent;
+    color: white;
+    font-size: 15px;
+}
+select option:nth-child(even){
+    background-color: #555555;
+    color: white;
+}
+select option:nth-child(odd){
+    background-color:#242424;
+    color: white;
+}
+.check{
+    display: flex;
+    margin-top: 20px;
+}
+.check p{
+    font-size: 14px;
+}
+input[type="checkbox"]{
+    height: fit-content;
+    margin:3px 10px 0 0;
+}
+.sec6btn{
+    margin: 20px 0;
+    background-color: transparent;
+    color: white;
+}
+.sec6btn:hover{
+    background-color: green;
+    border-color: transparent;
+}
+.fa{
+    font-size:30px;
+    position: absolute;
+    top:0
+}
+#chan{
+    display: none;
+} 
+#chan:checked+form{
+    position:unset;
+}
+
+
+/* media quarry for tablet  */
+
+@media only screen and (max-width:1000px){
+   
+    .sec6aside2{
+        flex-direction: column;
+    }
+    .sec6aside2>div{
+        width:100%;
+        padding:5% !important;
+    }
+    .sec6btn{
+        margin-left: 20px;
+    }
+
+}
+
+@media only screen and (max-width:800px){
+
+    .sec6aside1 h1+div{
+        display: flex;
+        flex-direction: column;
+        padding: 20px 10%;
+        gap:20px;
+    }
+    
+}
+@media only screen and (max-width:500px){
+
+    .sec6 h1{
+        font-size: 1.5rem !important;
+    }
+    input[type=date]{
+        width: 100%;
+        margin-right: 0;
+    }
+    .lang{
+        width: 100%;
+    }
+
+}
+@media only screen and (max-width:430px){
+
+    .sec6btn{
+        padding: 8px 15px;
+    }
+    .sec6aside1 button{
+        padding: 8px 0;
+    }
+}

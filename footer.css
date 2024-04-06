@@ -1,0 +1,200 @@
+    /* footer section 1 css */
+footer{
+    position: relative;
+    z-index: 1;
+}
+.footsec1{
+    padding:40px 8%;
+    background-color:rgb(235,235,235);
+}
+.footsec1>p{
+    padding: 20px 0;
+    border-bottom: 1px solid;
+    font-size: 14px;
+}
+.footsec1>p span{
+    color: red;
+}
+
+/* footer aside1 under sectio1 css */
+
+.footaside1{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.footaside1 ul{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    list-style: none;
+    padding-bottom: 10px;
+}
+.footaside1 li{
+    margin: 0;
+    padding: 20px 40px 10px 0;
+    font-size: 16px;
+}
+.footaside1>div p{
+    margin: 0 8px;
+}
+.footaside1>div{
+    padding: 20px 0;
+    text-align: right;
+}
+.footaside1>div i{
+    font-size: 23px;
+    margin:8px ;
+}
+.footaside1>div i:hover{
+    transform: scale(1.3);
+}
+.fa-facebook-f:hover{
+    color:slateblue;
+}
+.fa-youtube:hover{
+    color: red;
+}
+.fa-instagram:hover{
+    background-image:conic-gradient(purple 90deg,orangered 180deg, yellow 270deg, blue 360deg);
+    background-clip: text;
+    color: transparent;
+}
+.fa-twitch:hover{
+    color: blueviolet;
+}
+.fa-linkedin:hover{
+    color: cadetblue;
+}
+.footerlang{
+    padding: 5px;
+    border: 1px solid;
+}
+/* responsive for footer section1  */
+@media only screen and (max-width:1123px){
+    .footaside1>div{
+        text-align: left;
+    }
+}
+@media only screen and (max-width:840px){
+    .footaside1 ul{
+        border-bottom: 1px solid;
+    }
+    .footaside1 li{
+        width:50%;
+    }
+}
+@media only screen and (max-width:450px){
+    .footaside1 li{
+        width:100%;
+    }
+}
+
+/* css for footer section 2 and aside2 below */
+
+.footsection2{
+    width:100%;
+    padding:30px 9%;
+    display: flex;
+    background-color:rgb(245,245,245);
+}
+.footaside2>div{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+.footsection2>div>img{
+    width: 50px;
+    height: 50px;
+    margin-left: 20px;
+}
+.footsection2 div ul{
+    margin-top: 5px;
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+}
+.footsection2 div select{
+    width:200px;
+    border:none;
+    outline: none;
+    background-color: transparent;
+}
+.footerlang p{
+    padding: 0!important;
+    padding-left: 5px!important;
+}
+.footerlang {
+    padding: 10px;
+    border-radius: 5px;
+    margin-left: 20px;
+}
+.footsection2 div li{
+    font-size: 16px;
+    margin: 0;
+    padding: 10px 20px;
+}
+.footdivlist2{
+    margin-top: 20px;
+}
+.footdivlist2>ul {
+    width:80%
+}
+.footdivlist2>ul li{
+    font-size: 15px;
+    padding: 5px 20px;
+}
+.footsection2 div p{
+    padding: 20px 0 0 20px;
+    font-size: 15px;
+}
+.footdivlist2+img{
+    width: 150px;
+    height: 60px;
+    align-self: flex-end;
+    margin-left: 20px;
+    padding-top: 10px;
+}
+
+/* responsive for section 2 of footer */
+
+
+@media only screen and (max-width:1000px){
+
+    .footsection2{
+        flex-wrap: wrap;
+    }
+    .footaside2>div{
+        flex-wrap:wrap
+    }
+    .footsection2 div select{
+        width: 100%;
+    }
+    .footerlang {
+        margin-top: 10px;
+        width: 50%;
+    }
+}
+@media only screen and (max-width:600px){
+
+
+    .footsection2 div select{
+        width: 100%;
+    }
+    .footsection2 div li{
+        width: 50%;
+    }
+    .footdivlist2>ul li{
+        width: 100%;
+    }
+}
+@media only screen and (max-width:430px){
+    .footsection2 div li{
+        width: 100%;
+    }
+    .footerlang {
+        width: 100%;
+    }
+}

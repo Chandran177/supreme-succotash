@@ -1,0 +1,173 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    color:white;
+}
+body{
+    background-color: #293251;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+}
+main{
+    width: 430px;
+    padding: 10px 0;
+}
+.ani img{
+    margin-top: 5px;
+    z-index: 1;
+}
+
+h1{
+    font-size: 26px;
+    margin: 20px 0;
+}
+
+/* icon css */
+
+.icons img{
+    padding:13px;
+    background-color: white;
+    margin: 15px 5px;
+    border-radius: 8px;
+}
+.icons img:nth-child(2){
+    background-color: slateblue;
+}
+.icons img:nth-child(3){
+    background-color:black;
+}
+.icons img:nth-child(4){
+    background-color: green;
+}
+.icons img:nth-child(5){
+    background-color: blue;
+}
+.separate{
+    height: 2px;
+    background-color: gray;
+    margin: 15px 0 25px 0;
+}
+
+/* separator css */
+
+.separate>p{
+    position: relative;
+    width: fit-content;
+    bottom: 18px;
+    left:48%;
+    padding: 5px;
+    color: gray;
+    background-color: #293251;
+}
+
+/* form css */
+
+form{
+    text-align: left;
+}
+label{
+    font-size: 0.78rem;
+    font-weight:700;
+    letter-spacing:2px;
+}
+/* input css */
+input[type="text"], input[type="password"] {
+    width: 100%;
+    padding:15px 10px;
+    background-color: black;
+    border-radius: 8px;
+    margin: 6px 0 12px 0;
+    border:none;
+    border:1px solid gray
+}
+input[type=checkbox]{
+    width: 20px;
+    height: 20px;
+    vertical-align:sub;
+    margin-right: 10px;
+    margin-top: 10px;
+    box-shadow: 0 0 5px white;
+}
+button{
+    width: 100%;
+    padding: 13px;
+    margin: 25px 0;
+    background-color:rgb(67, 115, 204);
+    border: none;
+    border: 2px solid rgb(67, 115, 204);
+    border-radius: 10px;
+    font-size: 17px;
+    font-weight: bold;
+    letter-spacing: 3px;
+}
+p{
+    font-size: 18px;
+    color: rgb(67, 115, 204);
+    font: 600;
+    padding: 5px 0;
+}
+p+button{
+    background-color: black;
+}
+
+/* hover effect css */
+button:hover{
+    box-shadow: 0 0 35px -5px rgb(67, 115, 204);
+    transform: scale(0.98);
+}
+.icons img:hover{
+    transform: scale(0.96);
+}
+
+
+
+/* animation css for heading logo */
+.ani{
+    margin: auto;
+        border: 1px solid black;
+        width:76px;
+        /* height: 100px;  */
+        border-radius: 50%;
+        /* padding: px; */
+        box-sizing: border-box;
+        position: relative;
+        overflow:hidden;
+        box-shadow: 0 0 3px gray;
+}
+.ani1{
+    width: 45px;
+    height:78px;
+    position: absolute;
+    background-color: red;
+    top:0;
+    left:20%;
+    z-index:-1;
+    animation: a 4s infinite linear;
+}
+
+@keyframes a{
+    0%{
+        transform: rotate(0deg);
+        background-image: linear-gradient(red ,blue);
+    }
+    100%{
+        transform: rotate(360deg);
+        background-image: linear-gradient(red ,blue);
+    }
+}
+
+
+
+/* responsive csss  */
+
+@media only screen and (max-width:450px){
+
+    main{
+        width:100%;
+        padding: 20px;
+    }
+}
+

@@ -1,0 +1,212 @@
+      /* scrool bar css  */
+
+      .version2::-webkit-scrollbar,.version1::-webkit-scrollbar,.sec3list::-webkit-scrollbar {
+        height: .2rem;
+        width:.2rem ;
+        background-color: rgba(255, 0, 0,0);
+        border-radius: 20px;
+      }
+      ::-webkit-scrollbar-thumb {
+        background: linear-gradient(to right, rgb(0, 0, 0),rgba(0, 0, 255));
+        border-radius: 20px;
+      }
+
+      .asidesec1{
+        animation: out linear;
+        animation-timeline: view();
+        animation-range: exit -400px;
+      }
+      @keyframes out {
+        
+        to{
+            opacity: 0;
+        }
+      }
+
+      video{
+        transform-origin:top;
+        animation: video linear;
+        animation-timeline:view();
+        animation-range: exit;
+      }
+
+      @keyframes video{
+
+        25%{
+            opacity: 1;
+        }
+        85%,100%{
+            opacity: 0;
+            transform: scale(2);
+        }
+      }
+
+
+      .subnav label::before{
+        content:'';
+        position: absolute;
+        background-color: red;
+        width: 0;
+        height:2px;
+        bottom:-3px; 
+        transition:all 0.5s linear;
+      }
+
+      .subnav label:hover::before{
+        width:100%;
+        background-color: blue;
+      }
+
+      /* css media qurry for tablet */
+
+@media only screen and (max-width:951px){
+
+    .user1 div{
+        overflow: auto;
+        padding: 0;
+        /* display: inline-block; */
+    }
+    .head2 .fa-ellipsis-vertical{
+        display: none;
+    }
+    /* headder and section1 responsives */
+
+    .head2 .fa-bars{
+        display: block;
+        font-size: 25px;
+        margin-top: 2px;
+    }
+    .fa-circle-xmark{
+        display: block;
+    }
+    .div{
+        display: block;
+        background-color:rgb(223, 222, 222);
+        padding: 3px 5px;
+        margin-top: -3px;
+    }
+    .head2>img{
+        height:15px;
+        margin: 5px 10px;
+    }
+    /* navigation responsve */
+    nav{
+        position: fixed;
+        display: flex;
+        flex-direction: column;
+        background-color: rgba(255, 255, 255,0.5);
+        backdrop-filter: blur(4px);
+        box-shadow: 0 5px 5px 0px ;
+        height: 100vh;
+        /* left:0; */
+        top:0;
+        left:-100%;
+        width:310px;
+        border-radius:0 5px 5px 0;
+        overflow: auto;
+    }
+    nav img{
+        display: inline-block;
+        text-align: left;
+        margin: 5px;
+        width: 200px;
+    }
+    .div i{
+        position: absolute;
+        right: 20px;
+        top:10px;
+        font-size: 25px;
+    }
+    #nav:checked~nav{
+        left:0;
+        transition: all 0.5s;
+    }
+    .sec1 aside{
+        padding: 0 10%;
+    }
+    video{
+        height: fit-content;
+        object-fit: contain;
+        filter: brightness(100%);
+    }
+    .sec1 aside{
+        top:30%;
+    }
+    video+img{
+        display:inline;
+        filter: brightness(40%);
+    }
+    /* sub nav and list resopnsive */
+    .subnav{
+        width: 100%;
+        text-align: center;
+        padding: 10px;
+        border-bottom: 1px solid;
+        margin:10px 0;
+    }
+    .subnav label{
+        text-decoration: 2px underline gray;
+    }
+    header ul{
+        position: static;
+        width:100%;
+        background-color: transparent;
+        backdrop-filter:unset;
+    }
+    .dllist{
+        position:static;
+        display: none;
+        width: 100%;
+        background-color: transparent;
+        backdrop-filter: unset;
+    }
+    dt,dd,dl{
+        width: 100%;
+       
+    }
+
+    #game:checked+.dllist{
+        display: block;
+    }
+}
+
+                /* media for mobile  */
+
+@media only screen and (max-width:600px){
+
+    .user1 div p{
+        display: inline;
+    }
+    .user1 span{
+        width: 100%;
+        text-align: left;
+    }
+    .sec1 aside{
+        padding: 0 7%;
+        top:52%;
+    }
+    .sec1 p{
+        display: none;
+    }
+    .head1{
+        justify-content:flex-end;
+    }
+    .head1 .aside1inhead1{
+        display: none;
+    }
+   
+}
+@media only screen and (max-width:430px){
+    .user {
+        min-height: 40vh;
+    }
+    .user div{
+        min-height: 40vh;
+    }
+.d2 button{
+    width:48%;
+    padding: 8px 12px;
+    font-size: 13px;
+    margin-bottom: 7px;
+}
+}

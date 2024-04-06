@@ -1,0 +1,153 @@
+/* section 4 and sec5 css  */
+
+
+/* section 4 css */
+.sec4{
+    position: relative;
+    /* background-image: linear-gradient(to right , rgba(8, 12, 58)20%,rgba(255, 0, 0)); */
+}
+
+/* under section4 aside1 css and animation */
+
+.sec4aside1{
+    width: 100%;
+    height: 90vh;
+    animation:aniimg 10s linear 0s infinite;
+}
+
+@keyframes aniimg{
+    0%{
+        background-image: linear-gradient(to right , rgba(8, 12, 58,0.8),rgba(255, 0, 0, 0.2)), url(./ani.jpg);
+        /* filter: brightness(50%); */
+        background-size:100% 100%;
+        background-repeat: no-repeat;
+    }
+    25%{
+        background-image:linear-gradient(to right , rgba(8, 12, 58,0.8),rgba(255, 0, 0, 0.2)), url(./ani1.jpg);
+        /* filter: brightness(50%); */
+        background-size:100% 100%;
+        background-repeat: no-repeat;
+    }
+    50%{
+        background-image:linear-gradient(to right , rgba(8, 12, 58,0.8),rgba(255, 0, 0, 0.2)), url(./ani2.webp);
+        /* filter: brightness(50%); */
+        background-size:100% 100%;
+        background-repeat: no-repeat;
+    }
+    75%{
+        background-image:linear-gradient(to right , rgba(8, 12, 58,0.8),rgba(255, 0, 0, 0.2)), url(./ani4.jpg);
+        /* filter: brightness(50%); */
+        background-size:100% 100%;
+        background-repeat: no-repeat;
+    }
+    100%{
+        background-image:linear-gradient(to right , rgba(8, 12, 58,0.8),rgba(255, 0, 0, 0.2)), url(./ani.jpg);
+        /* filter: brightness(50%); */
+        background-size:100% 100%;
+        background-repeat: no-repeat;
+    }   
+}
+
+/* under section4 aside2 css */
+
+.sec4aside2{
+    color:rgb(243, 243, 243);
+    position: absolute;
+    top:0;
+    width: 100%;
+    height: 100%;
+    padding:2% 50% 2% 6% ;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-image: linear-gradient(to right , rgba(8, 12, 58,0.8),rgba(255, 0, 0, 0.2));
+}
+.sec4aside2 img{
+    height: 100px;
+    width:250px;
+}
+.sec4aside2 p{
+    font-size: 18px;
+    font-weight: 400;
+}
+.sec4aside2 button{
+    margin: 0;
+    margin-top: 10px;
+    width:fit-content;
+    color: white;
+    background: transparent;
+}
+
+/* section 5 css */
+.sec5{
+    width:100%;
+    padding:20px 7%;
+    background-color: cadetblue;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.sec5 h6{
+    font-size: 24px;
+    width: 570px;
+}
+.sec5 button{
+    background-color: transparent;
+    border:2px solid black; 
+}
+
+/* media quarry for tablet 850px */
+
+@media only screen and (max-width:850px){
+
+    .sec4aside1{
+        min-height: 200px;
+    }
+    .sec4aside2{
+        position: static;
+        padding: 30px 15px;
+        background-image: linear-gradient(to right , rgba(8, 12, 58),rgba(255, 0, 0));
+    }
+    .sec5 {
+        flex-wrap: wrap;
+        justify-content: center;
+        padding:3%;
+    }
+    .sec5 h6{
+        width: 100%;
+        padding: 0 0 20px 0;
+        text-align: center;      
+    }
+
+}
+@media only screen and (max-width:600px){
+    .sec4aside1{
+        height: 300px;
+    }
+    .sec5 h6{
+        font-size: 20px;
+    }
+   
+}
+@media only screen and (max-width:430px){
+    .sec4aside1{
+        height: 150px;
+    }
+    .sec4aside2 img{
+        width:200px;
+        height:75px;
+    }
+    .sec4aside2 p{
+        font-size: 16px;
+    }
+    .sec4aside2 button{
+        padding: 10px 12px;
+        font-size: 13px;
+        width:40%;
+    }
+    .sec5 button{
+        width: 50%;
+        padding: 10px 12px;
+        font-size: 13px;
+    }
+}

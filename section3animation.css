@@ -1,0 +1,142 @@
+
+
+.version1 ul,.version2 ul{
+    padding: 30px;
+    font-size: 1rem;
+    color: white;
+    font-weight: 600;
+}
+.version2 ul{
+    background-color: rgba(0, 0, 0, 0.5);
+    backdrop-filter: (15px);
+
+}
+.version1{
+    position: absolute;
+    top:0;
+    opacity: 0;
+    height: 100%;
+    overflow: auto;
+    z-index: -1;
+    transition: all 1s linear;
+}
+.sec3aside1>div:hover .version1{
+    z-index: 1;
+    opacity: .97;
+    background-color: rgba(0, 0, 0,0.8);
+    backdrop-filter: blur(5px); 
+}
+.inside3 img,.inside3>div{
+    transition: all 1s linear;
+}
+.inside3:hover img{
+    transform: translateY(-101%);
+    opacity: 0;
+}
+.inside3:hover >div:nth-child(2){
+    transform: translateY(101%);
+    
+    opacity: 0;
+}
+.detail3{
+  
+    position: absolute;
+    top:35%;
+    background-image: url(./images.jpg);
+    background-size:cover;
+    width:100%;
+    height: 0;
+    opacity: 0.5;
+    z-index: -1;
+    overflow: auto;
+    transition:  all 1s;
+    transform: rotatex(-90deg);
+}
+.inside3:hover .detail3{
+    top:0%;
+    opacity: 1;
+    height:100%;
+    transform: rotate(0);
+}
+
+
+/* ----------------------------section3 flip card amimation------------------------------ */
+
+
+.flip{
+    width: 30%;
+    height: 518px;
+    margin: 15px 0;
+    perspective: 1800px;
+    /* transform-origin:right; */
+}
+.flipcard{
+    /* background-color: red; */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2) ;
+    transition: all 0.6s 0.3s;
+    background-color: white;
+    height: 100%;
+    width: 100%;
+    position: relative;
+    /* transition: all 2s; */
+    transform-style: preserve-3d;
+}
+.front,
+.back{
+    height: 100%;
+    width: 100%;
+    backface-visibility: hidden;
+}
+.front{
+    /* background-color: red; */
+    background-image: url(./wave/battlefield_35-wallpaper-640x960.jpg);
+    background-size: cover;
+    position: relative;
+}
+.back{
+    transform: rotateY(180deg);
+    position: absolute;
+    top:0;
+}
+.back img{
+    width: 100%;
+}
+.flip:hover > .flipcard{
+    transform: rotatey(-180deg);
+    /* transform-origin:left; */
+}
+
+/* =------------------------back flip 1 card--------------------------- */
+
+.back1{
+    transform: rotatex(180deg);
+}
+.front1{
+    background-image: url(./wave/battlefield-4-sniper-4k-pr-1440x2560.jpg);
+}
+.flip:hover > .flipcard1{
+    transform: rotatex(-180deg); 
+}
+
+/* ---------------------------------back flip 2 card -------------------------------- */
+
+.back2{
+    transform: rotatex(180deg);
+}
+.front2{
+    background-image: url(./wave/BFV_RevealScreenshot_04_wLogo_trans_NvBQzQNjv4BqLUm2LqZ7QfPrWh62iB90NVTmGTZwRSZcqbDiPNar8DA.webp);
+}
+.flip:hover > .flipcard2{
+    transform: rotatex(-180deg); 
+}
+/* -----------------------------------back flip car3----------------------------- */
+
+.back3{
+    transform: rotatey(180deg);
+}
+.front3{
+    background-image: url(./wave/Battlefield-3-Action-Game-iphone.jpg);
+}
+.flip:hover > .flipcard3{
+    transform: rotatey(-180deg); 
+}
